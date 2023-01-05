@@ -8,10 +8,7 @@ typedef struct node
 } node;
 
 int main (void) {
-    printf("hello world\n");
     makelist();
-   
-
 };
 
  void makelist (void) {
@@ -22,11 +19,12 @@ int main (void) {
     tmp->number = 1;                    //give it a number
     tmp->next = NULL;                   //give it the adress to the next node or null
     list = tmp;                         //pass the node adress to list pointer
+    flist = tmp;
 
     tmp = malloc(sizeof(node));         
     tmp->number = 2;
     tmp->next = NULL;
-    list->next = tmp;
+    flist->next = tmp;
     flist = tmp;
 
     tmp = malloc(sizeof(node));
