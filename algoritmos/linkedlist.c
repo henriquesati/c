@@ -14,31 +14,40 @@ struct node* init_node(){
         fprintf(stderr, "Memory allocation failed\n");
         exit(EXIT_FAILURE);
     }
-     return tmp;
+    tmp->next = NULL;
+    return tmp;
 }
 
 void populate(node *list, int arg){
     node *tmp = malloc(sizeof(node));
     tmp->number = arg;
     tmp->next = NULL;
-    list->next = tmp;
-    printf("%i", arg);
-    printf("test\n");
+
+    node *tail = list;
+    while (tail->next != NULL){
+        tail = tail->next;
+    }
+    tail->next = tmp;
 
 };
 
 int main(void){
     node *list = init_node();
+    list->number = 1;
     populate(list, 2);
     populate(list, 3);
     populate(list, 4);
-    printf("passou\n");
-
-    node *pointer = list;
-    while (pointer != NULL)
-    {
-        printf("%i\n", pointer->number);
-        pointer = pointer->next;
+    
+    node *list_to_iterate = list;
+    while (1){
+        printf("value: %i\n", list_to_iterate->number);
+        if (list_to_iterate->next == NULL){
+            break;
+        }
+        list_to_iterate = list_to_iterate->next;
     }
+
+
+   
     
 };
