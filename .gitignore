@@ -1,0 +1,15 @@
+*.o
+*.out
+*.exe
+
+.DS_Store
+
+*~
+\#*\#
+*.swp
+
+a.out
+
+*.log
+
+
