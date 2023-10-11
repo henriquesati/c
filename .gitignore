@@ -1,6 +1,7 @@
 *.o
 *.out
 *.exe
+.vscode
 
 .DS_Store
 
@@ -11,5 +12,4 @@
 a.out
 
 *.log
-
-
+.vscode
