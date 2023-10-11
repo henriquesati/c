@@ -1,0 +1,19 @@
+//palindromo valendo ponto
+
+//como o programa em C sabe que o echo ta passando uma sucessão de numeros ao inves de um só numero inteiro? arquivo echo.c
+    // comando; echo "5 2 3 1 6 4 8 7 9 6" |  ./pares
+    //aula 01.2 slide 17
+
+aula 02.1.5 qual a utilidade do typecasting?
+   const char **less = malloc(sizeof(char *) *5);
+   const char **less = (const char **)malloc(5 * sizeof(const char *));
+
+
+
+//taks
+ -codigo 02-1-5 mais memory safe
+
+ //inferencia de tipos em inline expressions (int x = 3892 * (long)239
+
+
+//slide 52 2.2, por que fazer typecasting no primeiro exemplo e no segundo nao? (45)
