@@ -2,6 +2,7 @@
 *.out
 *.exe
 .vscode
+.txt
 
 .DS_Store
 
