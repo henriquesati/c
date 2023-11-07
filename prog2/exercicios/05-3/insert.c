@@ -13,9 +13,11 @@ void insertion_sort(int v[], int N){
     }
 }
 
-
-
-
 int main(){
-
+    int numeros[10] = {9, 3, 7, 1, 5, 8, 2, 6, 4, 0};
+    insertion_sort(numeros, 10);
+     printf("Array desordenado: ");
+    for(int i = 0; i < 10; i++) {
+        printf("%d ", numeros[i]);
+    }
 }
