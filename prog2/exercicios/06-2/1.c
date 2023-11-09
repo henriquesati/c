@@ -10,7 +10,6 @@ int* in(int vet[], int (*f)(int), int n ){
     for(int i=0; i<n; i++){
         vet_alocado[i] = f(vet[i]);
     }
-    puts("Ts");
     return vet_alocado;
 }
 

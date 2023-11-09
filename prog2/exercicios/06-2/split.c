@@ -8,24 +8,34 @@ char* get_buffer(){
 
 }
 
+
 char** split(const char* string, int n){
     char *buffer = get_buffer();
     int j=0;
-    int size = n;
+    int i=0;
+    int words_count = 0;
     int str_arr_count = 0;
-    char **vet_to_return = malloc(sizeof(char*)* size);
+    int last = 0;
+    char **vet_to_return = malloc(sizeof(char**)* n);
 
-    for (int i=0; i<size; i++){
+    while(words_count != n){
+        printf("%c", string[i]);
         buffer[j] = string[i];
         j++;
+        if(string[i] == '\0'){
+            strcpy(vet_to_return[n-1], string+last+1);
+            words_count++;
+        }
         if(string[i] == ' '){
+            last = i;
+            buffer[j] = '\0';
             vet_to_return[str_arr_count] = strdup(buffer);
             free(buffer);
             buffer = get_buffer();
             str_arr_count++;
             j = 0;
         }
-
+        i++;
     }
     return vet_to_return;
 }
@@ -36,7 +46,5 @@ int main(){
     int n = 4;
     puts("v");
     char** palavras = split("olha que coisa mais linda", n);
-    for(int i = 0; i < n; i++){
-        printf("%s\n", palavras[i]);
-    }
+    printf("\n%s", palavras[n-1]);
 }
