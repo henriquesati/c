@@ -8,13 +8,12 @@ int main(){
     int n=0;
 
     stack[n++] = 'A';
-    stack[n++] = 'B';
-    stack[n++] = 'C';
-    stack[n++] = 'D';
+    printf("%i\n", n);
+    // stack[n++] = 'B';
 
-    while(n>0){
-        printf("%c ", stack[n-1]);
-        n--;
-    }
+    // stack[n++] = 'C';
+    // stack[n++] = 'D';
+
+    
 
 }
