@@ -10,7 +10,7 @@ typedef struct {
 
 Stack init(){
     Stack stack;
-    stack.stack = malloc(sizeof(char) *1 );
+    stack.stack = malloc(sizeof(char) *1);
     stack.n = 0;
     stack.capacity = 0;
     return stack;
@@ -23,23 +23,21 @@ void pop(Stack *stack){
     assert(!is_empty(stack));
     puts("Pop");
     stack->n--;
+    stack->capacity++;
 }
 
 char get_top(Stack *stack){
-    assert(!is_empty);
+    assert(!is_empty(stack));
     return stack->stack[stack->n-1];
 }
 
 void push(Stack *stack, char letra){
-    if (stack->n == stack->capacity){
+    if (stack->n <= stack->capacity){
         stack->stack[stack->n++] = letra;
     }
-    // if (stack->n < stack->capacity){
-    //     stack->stack[stack->n++] = letra; // por que esse if da problema?
-    //     stack->capacity--;
-    // }
     else{
-        stack->stack = realloc(stack->stack, sizeof(char) * (stack->n+1));
+        stack->stack = realloc(stack->stack, sizeof(char) * (stack->n+2));
+        stack->capacity = stack->n+2;
         stack->stack[stack->n++] = letra;
     }
 }
@@ -54,8 +52,9 @@ int main(){
     push(&mi, 'x');
     printf("%c\n", mi.stack[3]);
     pop(&mi);
-    printf("%c\n", get_top(&mi));
+    puts("elemento popado");
+    char tmp = get_top(&mi);
+    printf("%c\n", tmp);
 
 
 }
-//pop nao popando por algum motivo

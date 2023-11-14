@@ -35,3 +35,18 @@ int main(){
 
 }
 ```
+
+
+```
+pilha funs dinamica problema no segundo if
+```
+
+
+```Stack init(){
+    Stack stack;
+    stack.n = 0;
+    stack.capacity = 0;
+    return stack;
+}```
+
+capacity serve so pra indexar o primeiro elemento corretamente?
