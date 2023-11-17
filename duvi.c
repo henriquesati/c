@@ -49,4 +49,7 @@ pilha funs dinamica problema no segundo if
     return stack;
 }```
 
-capacity serve so pra indexar o primeiro elemento corretamente?
+
+``` 10-2
+por que reatualizar o ponteiro?
+```

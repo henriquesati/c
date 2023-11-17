@@ -8,7 +8,7 @@ int main() {
     char *string[50];
     int n_line = 0;
     FILE *file = fopen("strings.txt", "r");
-    while ( (check_end = fscanf(file, "%s", string)) != EOF){
+    while ( (check_end = fscanf(file, "%[^\n]", string)) != EOF){
         printf("n_line: %i: string: %s\n", n_line, string);
         n_line++;
     }
