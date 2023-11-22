@@ -40,16 +40,3 @@ int main(){
 ```
 pilha funs dinamica problema no segundo if
 ```
-
-
-```Stack init(){
-    Stack stack;
-    stack.n = 0;
-    stack.capacity = 0;
-    return stack;
-}```
-
-
-``` 10-2
-por que reatualizar o ponteiro?
-```
