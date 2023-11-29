@@ -11,7 +11,7 @@ Node* init(char letra){
     Node *tmp = malloc(sizeof(Node));
     tmp->letra = letra;
     tmp->next = NULL;
-    tmp-> = NULL;
+    tmp->previous = NULL;
 }
 
 Node* append(Node *head, char letra){

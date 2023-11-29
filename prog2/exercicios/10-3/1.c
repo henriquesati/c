@@ -41,6 +41,7 @@ void print_list(Node *head) {
 
 int main(){
     Node *mynode = init_node();
+    Node *mynode = init(node);
     puts("kdkijd");
     put_word("macaquinhos", mynode);
     
