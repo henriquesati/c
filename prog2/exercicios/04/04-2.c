@@ -7,7 +7,6 @@
 
 
 int main(){
-    
     char **vet_strings = malloc(sizeof(const char**) * n_strings);
     for (int i =0; i < n_strings; i++){
         vet_strings[i] = malloc(sizeof(char*) * 50);
